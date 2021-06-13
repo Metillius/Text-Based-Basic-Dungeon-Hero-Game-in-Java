@@ -4,6 +4,7 @@ public class Character {
     private String name;
 
 
+
     public Character(){}
     public Character(int health, String name) {
         this.health = health;
@@ -26,7 +27,6 @@ public class Character {
         this.name = name;
     }
 
-    public void printCharacterInfo(){}
+    public void printCharacterInfo(Character character){}
 
- 
-}
+ }
