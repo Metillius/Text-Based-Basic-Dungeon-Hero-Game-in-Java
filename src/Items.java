@@ -1,18 +1,34 @@
-public class Items {
+public class Item {
 
+    private String name;
     private int weight;
     private double value;
     private int damage;
     private int armorAmount;
     private int range;
 
-    public Item(){}
-    public Item(int weight, double value, int damage,int armorAmount,int range) {
+
+    public Item(String name,int weight, double value, int damage,int armorAmount,int range) {
         this.weight = weight;
         this.value = value;
         this.damage = damage;
         this.armorAmount = armorAmount;
         this.range = range;
+    }
+    public Item(String name,int weight, double value, int damage,int range) {
+        this.name = name;
+        this.weight = weight;
+        this.value = value;
+        this.damage = damage;
+        this.range = range;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getArmorAmount() {
@@ -54,5 +70,4 @@ public class Items {
     public void setRange(int range) {
         this.range = range;
     }
- 
-}
+ }
