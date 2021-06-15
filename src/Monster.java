@@ -75,7 +75,7 @@ public class Monster extends Character {
         setHealth(25);
 
 
-        System.out.print(" Health: "+getHealth() +" name: "+monster.weapon.getName()+" weight: "+ monster.weapon.getWeight()+ " value: "+ monster.weapon.getValue()+ " damage: "+ monster.weapon.getDamage()+" range: "+monster.weapon.getRange());
+        System.out.println(" Health: "+getHealth() +" name: "+monster.weapon.getName()+" weight: "+ monster.weapon.getWeight()+ " value: "+ monster.weapon.getValue()+ " damage: "+ monster.weapon.getDamage()+" range: "+monster.weapon.getRange());
 
 
     }
