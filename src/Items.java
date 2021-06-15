@@ -1,11 +1,13 @@
 public class Item {
 
     private String name;
+    private String rare;
     private int weight;
     private double value;
     private int damage;
     private int armorAmount;
     private int range;
+
 
 
     public Item(String name,int weight, double value, int damage,int armorAmount,int range) {
@@ -15,12 +17,23 @@ public class Item {
         this.armorAmount = armorAmount;
         this.range = range;
     }
-    public Item(String name,int weight, double value, int damage,int range) {
+    public Item(String name, int weight, double v, int damage, double value) {
         this.name = name;
-        this.weight = weight;
+        this.weight = this.weight;
         this.value = value;
-        this.damage = damage;
+        this.damage = this.damage;
         this.range = range;
+    }
+
+    public Item(String name, double value) {
+
+    }
+
+
+    public Item(String name, String rare){
+        this.name = name;
+        this.rare = rare;
+
     }
 
     public String getName() {
@@ -70,4 +83,13 @@ public class Item {
     public void setRange(int range) {
         this.range = range;
     }
- }
+
+    public String getRare() {
+        return rare;
+    }
+
+    public void setRare(String rare) {
+        this.rare = rare;
+    }
+
+}
