@@ -1,5 +1,4 @@
-public class Clothing {
-  
+
   public class Clothing extends Item {
 
 
@@ -35,4 +34,4 @@ public class Clothing {
 
 }
   
-}
+
