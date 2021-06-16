@@ -2,6 +2,7 @@ public class Character {
 
     private int health;
     private String name;
+    private int storage;
 
 
 
@@ -27,6 +28,14 @@ public class Character {
         this.name = name;
     }
 
+    public int getStorage() {
+        return storage;
+    }
+
+    public void setStorage(int storage) {
+        this.storage = storage;
+    }
+
     public void printCharacterInfo(Character character){}
 
- }
+}
