@@ -24,9 +24,11 @@ public class Hero extends Character {
     public void printCharacterInfo(Hero hero){
 
         System.out.println("(Please enter a name)");
-         String tempname = scanner.nextLine();
+        String tempname = scanner.nextLine();
+
         setName(tempname);
         System.out.println("My name is " + getName()+ " I am the hero of this dungeon!");
+        hero.setStorage(30);
         setHealth(100);
         System.out.println(getName());
 
@@ -35,5 +37,13 @@ public class Hero extends Character {
 
 
     }
+    public void printItemInfo(Hero hero){
 
-  }
+
+
+        System.out.println(" name: "+hero.weapon.getName()+" weight: "+ hero.weapon.getWeight()+ " value: "+ hero.weapon.getValue()+ " damage: "+ hero.weapon.getDamage()+" range: "+hero.weapon.getRange());
+
+
+    }
+
+}
