@@ -80,4 +80,13 @@ public class Monster extends Character {
 
     }
 
+    public void printItemInfo(Monster monster){
+
+
+
+        System.out.println(" name: "+monster.weapon.getName()+" weight: "+ monster.weapon.getWeight()+ " value: "+ monster.weapon.getValue()+ " damage: "+ monster.weapon.getDamage()+" range: "+monster.weapon.getRange());
+
+
+    }
+
 }
