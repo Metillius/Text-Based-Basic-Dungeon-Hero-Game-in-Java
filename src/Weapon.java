@@ -6,7 +6,7 @@ public class Weapon extends Item {
     }
 
     public static Weapon Old_Sword(){
-        Weapon Old_Sword = new Weapon("Old Sword",5,6,4,1);
+        Weapon Old_Sword = new Weapon("Old Sword",3,6,4,1);
         return Old_Sword;
     }
     public static Weapon Travellers_Sword(){
@@ -18,7 +18,7 @@ public class Weapon extends Item {
         return Claymore;
     }
     public static Weapon The_Master_Sword(){
-        Weapon The_Master_Sword = new Weapon("The Master Sword",7,38,8,2);
+        Weapon The_Master_Sword = new Weapon("The Master Sword",5,38,8,2);
         return The_Master_Sword;
     }
 
