@@ -17,11 +17,11 @@ public class Item {
         this.armorAmount = armorAmount;
         this.range = range;
     }
-    public Item(String name, int weight, double v, int damage, double value) {
+    public Item(String name, int weight, double value, int damage, int range) {
         this.name = name;
-        this.weight = this.weight;
+        this.weight = weight;
         this.value = value;
-        this.damage = this.damage;
+        this.damage = damage;
         this.range = range;
     }
 
