@@ -8,12 +8,19 @@ public class Game {
 
         Hero hero = new Hero(Weapon.Old_Sword());
         Monster monster = new Monster(Weapon.The_Master_Sword());
+        Townspeople townspeople = new Townspeople();
+
+
+        System.out.println("_________________________________");
+        System.out.println("   ______W_E_L_C_O_M_E______");
+        System.out.println("");
+
 
 
         hero.printCharacterInfo(hero);
 
 
-        System.out.println("***************************************");
+        System.out.println("______________________________________________________________________");
         monster.monsterStatus();
         monster.printCharacterInfo(monster);
 
@@ -38,13 +45,18 @@ public class Game {
 
                         hero.setStorage(hero.getStorage()-monster.weapon.getWeight());
                         hero.setWeapon(monster.getWeapon());
-                        System.out.println("your are : ");
+                        System.out.println("Your items are : ");
                         hero.printItemInfo(hero);
+                        System.out.println("Your storage has " + hero.getStorage()+" empty kilograms");
+                        townspeople.healing();
+                        hero.setHealth(hero.getHealth()+townspeople.healingAmount);
+                        hero.printCharacterInfo(hero);
+
 
                     }
 
                     else{
-                        System.out.println("you didnt pick this item");
+                        System.out.println("you didn't pick this item");
                         break;
                     }
 
@@ -69,4 +81,3 @@ public class Game {
         }
     }
 
-}
