@@ -1,5 +1,7 @@
 public class Weapon extends Item {
 
+    //weaponis an item
+
 
     public Weapon(String name, int weight,double value, int damage,int range){
         super(name,weight,value,damage,range);
@@ -7,6 +9,7 @@ public class Weapon extends Item {
 
 
 
+    //weapon aynı armor gibi ama hasar vermesini sağlayan bir damage değeri ve hasarıyla çarpılıp hasarı arttırn bir menzil değeri var
     public static Weapon Old_Sword(){
         Weapon Old_Sword = new Weapon("Old Sword",3,6,4,1);
         return Old_Sword;
@@ -16,7 +19,7 @@ public class Weapon extends Item {
         return Travellers_Sword;
     }
     public static Weapon Claymore(){
-        Weapon Claymore = new Weapon("Claymore",7,38,8,2);
+        Weapon Claymore = new Weapon("Claymore",7,38,7,2);
         return Claymore;
     }
     public static Weapon The_Master_Sword(){
