@@ -22,6 +22,7 @@ public class Game implements GameMechanics {
 
 
 
+    //we created the files here
     public static void highScoreCreator(){
 
         FileWriter highscores = null;
@@ -90,6 +91,7 @@ public class Game implements GameMechanics {
                 System.out.println("Your HP :" + hero.getHealth());
 
 
+                //We check here if the hero is dead or not
                 if (hero.getHealth() <= 0){
 
 
@@ -98,15 +100,19 @@ public class Game implements GameMechanics {
                     System.out.println(fallenHero);
                     System.out.println(deathLine);
                     System.out.println(gameOver);
+                    //heronun scorunu bi files dosyası olarak yaratıyo
                     scorehero.setName(hero.getName());
                     scorehero.setScores(hero.getScores());
                     highScoreCreator();
 
+                    //hero öldüğünde oyunun bitirilmesini sağlıyor
                     System.exit(0);
 
                 }
 
 
+                //canavarın ölüp ölmediği kontrol ediliyo eğer öldüyse silahları ve zırhı yere düşüyo ve hero bunları alabiliyo
+                //heronun silah ya da zırh alması ve townspeople kurtarması scorunu arttırıyo
                 if(monster.getHealth() <= 0){
                     System.out.println( m +" died. Its "+w+" is: " );
                     monster.printWeaponInfo(monster);
@@ -115,19 +121,23 @@ public class Game implements GameMechanics {
 
                     String tempanswer = scanner.nextLine();
 
+                    //heronun çantasında almak istediği eşya için yeterli yer olup olmadığı kontrol ediliyo
                     if(tempanswer.equals(y) && hero.getStorage() > 0 && hero.getStorage()> monster.weapon.getWeight()){
 
+                        //eğer hero item alırsa heronun çantasındaki boş alan azalıyo
                         hero.setStorage(hero.getStorage()-monster.weapon.getWeight());
                         hero.setWeapon(monster.getWeapon());
                         hero.setScores(hero.getScores()+monster.weapon.getValue());
                         System.out.println("Your "+w+" is : ");
                         hero.printWeaponInfo(hero);
+                        //ve heronun kalan çanta kapasitesi yazdırılıyo
                         System.out.println(storageLine);
                         System.out.println("⚛__Your storage has " + hero.getStorage()+" empty kilograms__⚛");
                         System.out.println(storageLine);
 
 
 
+                        //silah için olduğu gibi zırh için de anıları yapılıyo
                         System.out.println("Its "+a+" is: " );
                         monster.printArmorInfo(monster);
                         System.out.println(p);
@@ -169,6 +179,8 @@ public class Game implements GameMechanics {
 
 
 
+                    //random kodu kullanarak 1/3 ihtimalle odada bi townspeople olması ve can basıp basmadığı gösteriliyo
+                    //eğer hero bi townspeople ı kurtarırsa skoruna ekstradan ekleniyo
                     Random random = new Random();
                     int heal_or_not = random.nextInt(3)+1;
 
@@ -186,6 +198,7 @@ public class Game implements GameMechanics {
 
                     }
 
+                    //canavarın yeniden uyanıp saldırmasını önlemek için bi satır kod yazdık böyle bi hatayla karşılaştık
                     monster.setHealth(monster.getHealth()-50);
 
                 }
@@ -208,7 +221,8 @@ public class Game implements GameMechanics {
         }
 
 
-                System.out.println();
+        //hero bi canavarı öldürürse ya da o odadaki canavardan kaçmayı seçerse bir sonraki odaya geçmiş oluyo
+        System.out.println();
                 System.out.println(next);
                 System.out.println();
 
@@ -216,6 +230,7 @@ public class Game implements GameMechanics {
     }
 
 
+            //bi sonraki levela geçmeden önce heronun canının 0 olup olmadığı kontrol ediliyo
             if(hero.getHealth() >= 0){
 
                 //TEXTS FOR NEXT LEVEL
@@ -223,6 +238,7 @@ public class Game implements GameMechanics {
                 System.out.println(levelLine);
                 System.out.println(nextLevel);
                 System.out.println(levelLine);
+                System.out.println();
 
             }
 
@@ -233,6 +249,7 @@ public class Game implements GameMechanics {
         }
 
 
+        //burada gameover texti yazılıyo ve heronun skorunun bulunduğu file dosyası çalıştırılıyo
         System.out.println(gameOver);
         scorehero.setName(hero.getName());
         scorehero.setScores(hero.getScores());
