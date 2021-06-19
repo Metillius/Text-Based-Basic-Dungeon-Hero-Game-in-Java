@@ -4,6 +4,7 @@ public class Hero extends Character {
 
     private double scores = 0;
 
+    //compositionu burda kullandık vurdaki ilişki hero has a weapon ve hero has a armor ilişkisi
     Weapon weapon;
     Armor armor;
 
@@ -20,6 +21,7 @@ public class Hero extends Character {
     }
 
 
+    //heronun ismi burda oluşturuluyo
     @Override
     public void setCharacterInfo(Hero hero){
 
@@ -40,6 +42,7 @@ public class Hero extends Character {
     }
 
 
+    //heronun bilgileri burda yazdırılıyo
     @Override
     public void printCharacterInfo(Hero hero){
 
@@ -51,6 +54,7 @@ public class Hero extends Character {
     }
 
 
+    //heronun silah bilgileri burda yazdırılıyo
     @Override
     public void printWeaponInfo(Hero hero){
 
@@ -62,6 +66,8 @@ public class Hero extends Character {
 
     }
 
+    //heronun zırh bilgileri burda yazdırılıyo
+    @Override
     public void printArmorInfo(Hero hero){
 
 
