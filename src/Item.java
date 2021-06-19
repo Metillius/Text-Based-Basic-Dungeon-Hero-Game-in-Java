@@ -1,22 +1,19 @@
 public class Item {
 
     private String name;
-    private String rare;
     private int weight;
     private double value;
     private int damage;
-    private int armorAmount;
+    private int protection;
     private int range;
 
 
 
-    public Item(String name,int weight, double value, int damage,int armorAmount,int range) {
-        this.weight = weight;
-        this.value = value;
-        this.damage = damage;
-        this.armorAmount = armorAmount;
-        this.range = range;
-    }
+
+
+
+
+
     public Item(String name, int weight, double value, int damage, int range) {
         this.name = name;
         this.weight = weight;
@@ -30,9 +27,11 @@ public class Item {
     }
 
 
-    public Item(String name, String rare){
+    public Item(String name, int protection,double value,int weight){
         this.name = name;
-        this.rare = rare;
+        this.protection = protection;
+        this.value = value;
+        this.weight = weight;
 
     }
 
@@ -44,12 +43,12 @@ public class Item {
         this.name = name;
     }
 
-    public int getArmorAmount() {
-        return armorAmount;
+    public int getProtection() {
+        return protection;
     }
 
-    public void setArmorAmount(int armorAmount) {
-        this.armorAmount = armorAmount;
+    public void setProtection(int Protection) {
+        this.protection = protection;
     }
 
     public int getWeight() {
@@ -84,12 +83,5 @@ public class Item {
         this.range = range;
     }
 
-    public String getRare() {
-        return rare;
-    }
-
-    public void setRare(String rare) {
-        this.rare = rare;
-    }
 
 }
