@@ -5,6 +5,8 @@ public class Weapon extends Item {
         super(name,weight,value,damage,range);
     }
 
+
+
     public static Weapon Old_Sword(){
         Weapon Old_Sword = new Weapon("Old Sword",3,6,4,1);
         return Old_Sword;
