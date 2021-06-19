@@ -2,6 +2,7 @@ import java.util.Random;
 public class Monster extends Character {
 
     Random random = new Random();
+    //compositionu burda kullandık vurdaki ilişki hero has a weapon ve hero has a armor ilişkisi
     Weapon weapon;
     Armor armor;
 
@@ -12,6 +13,7 @@ public class Monster extends Character {
         this.armor=armor;
     }
 
+    //monsterın random bi silah ve zırh alması burda sağlanıyo silah ve zırh ne kadar güçlüyse monsterın onu alma ihtimali o kadar az oluyo
     public void monsterStatus(){
 
         int weapon_number;
