@@ -1,35 +1,25 @@
-public class Clothing extends Item {
+public class Armor extends Item {
 
 
 
-    public Clothing (String name, String rare){
-        super(name,rare);
+    public Armor (String name, int protection, double value,int weight){
+        super(name,protection,value,weight);
     }
 
-    public static Clothing Fabric_Armour(){
-        Clothing Fabric_Armour = new Clothing("Fabric Armour","Very Rare");
-        return Fabric_Armour;
+    public static Armor leatherArmor(){
+        Armor LeatherArmor = new Armor("Leather Armor",1 , 10,3);
+        return LeatherArmor;
     }
 
-    public static Clothing Rigid_Armour() {
-        Clothing Rigid_Armour = new Clothing ("Rigid Armour","Common");
-        return Rigid_Armour;
+    public static Armor ironArmor() {
+        Armor IronArmor = new Armor ("Iron Armor", 2, 20,5);
+        return IronArmor;
     }
 
-    public static Clothing Horn_Armour(){
-        Clothing Horn_Armour = new Clothing("Horn Armour","Common");
-        return Horn_Armour;
+    public static Armor ebonyArmor(){
+        Armor EbonyArmor = new Armor("Ebony Armor",3 , 30,4 );
+        return EbonyArmor;
     }
 
-    public static Clothing Wood_Armour(){
-        Clothing Wood_Armour = new Clothing("Wood Armour","Legendary");
-        return Wood_Armour;
-    }
-
-    public static Clothing Plastic_Armour(){
-        Clothing Plastic_Armour = new Clothing("Plastic Armour","Legendary Rare");
-        return Plastic_Armour;
-    }
 
 }
-
