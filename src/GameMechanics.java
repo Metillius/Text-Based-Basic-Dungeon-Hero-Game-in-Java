@@ -10,6 +10,7 @@ public interface GameMechanics {
 
 
 
+    //stringsleri burada kullandık yazması uzun süren stringleri kısa kelimelerle belirttik
     String roomInfo = "There is an merciless Orc in this room";
 
     String fightChoice = "Would you like to fight with this monster? yes/no ";
